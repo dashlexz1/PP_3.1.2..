@@ -28,8 +28,8 @@
         <td th:text="${user.getName()}"></td>
         <td th:text="${user.getSalary()}"></td>
         <td th:text="${user.getAge()}"></td>
-        <td><a th:href="'/users/id?id=' + ${user.getId()}">Изменить</a></td>
-        <td><a th:href="'/users/removeUser?id=' + ${user.getId()}">Удалить</a></td>
+        <td><a th:href="'/userspage/id?id=' + ${user.getId()}">Изменить</a></td>
+        <td><a th:href="'/userspage/removeUser?id=' + ${user.getId()}">Удалить</a></td>
     </tr>
     </tbody>
 </table>
