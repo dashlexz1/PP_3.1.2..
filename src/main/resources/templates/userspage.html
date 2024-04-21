@@ -35,7 +35,7 @@
 </table>
 <div class = "container">
     <h2>Добавить пользователя</h2>
-    <form th:method="POST" th:action="@{/users}" th:object="${user}">
+    <form th:method="POST" th:action="@{/userspage}" th:object="${user}">
         <label for="name">Введите имя:</label>
         <input type="text" th:field="*{name}" id="name"/>
 
@@ -49,12 +49,12 @@
         <input type="submit" value="Сохранить"/>
     </form>
     <div class ="button">
-        <button onclick="window.location.href = '/users'">К таблице</button>
+        <button onclick="window.location.href = '/userspage'">К таблице</button>
     </div>
     </div>
 <div class = "container">
     <h2>Изменить пользователя</h2>
-    <form th:method="POST" th:action="@{/users/id}" th:object="${user}">
+    <form th:method="POST" th:action="@{/userspage/id}" th:object="${user}">
         <input hidden="hidden" type="number" th:field="*{id}" id="idUser"/>
 
         <label for="name">Введите имя:</label>
@@ -70,7 +70,7 @@
         <input type="submit" value="Изменить"/>
     </form>
     <div class ="button">
-        <button onclick="window.location.href = '/users'">К таблице</button>
+        <button onclick="window.location.href = '/userspage'">К таблице</button>
     </div>
 </div>
 </body>

@@ -11,7 +11,7 @@ import com.dashlexz.spring.pp_312.models.User;
 
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/userspage")
 public class UserController {
 
     private UserService userService;
@@ -28,12 +28,12 @@ public class UserController {
         logger.info("Получаем список всех пользователей");
         model.addAttribute("users", userService.listUsers());
         logger.info("Пользователи успешно получены {}", userService.listUsers().size());
-        return "users";
+        return "userspage";
     }
     @GetMapping("/new")
     public String createUserGet(@ModelAttribute("user") User user) {
         logger.info("GET запрос на создание нового пользователя");
-        return "users";
+        return "userspage";
     }
 
     @PostMapping()
@@ -49,7 +49,7 @@ public class UserController {
         logger.info("GET запрос на удаление пользователя: {}", id);
         userService.deleteById(id);
         logger.info("Пользователь {} успешно удален", id);
-        return "users";
+        return "userspage";
     }
 
     @GetMapping("/id")
@@ -57,7 +57,7 @@ public class UserController {
         logger.info("GET запрос на редактирование пользователя с id: {}", id);
         model.addAttribute("user", userService.getUser(id));
         logger.info("Пользователь получен {}", id);
-        return "users";
+        return "userspage";
     }
 
     @PostMapping("/id")
