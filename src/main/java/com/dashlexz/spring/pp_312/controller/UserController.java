@@ -41,7 +41,7 @@ public class UserController {
         logger.info("POST запрос на создание пользователя: {}", user);
         userService.saveUser(user);
         logger.info("Пользователь {} успешно сохранен", user.getName());
-        return "redirect:/users";
+        return "redirect:/userspage";
     }
 
     @GetMapping("/removeUser")
@@ -65,7 +65,7 @@ public class UserController {
         logger.info("POST запрос на редактирование пользователя: {}", user);
         userService.updateUser(user);
         logger.info("Пользователь с id: {} успешно обновлен", user.getId());
-        return "redirect:/users";
+        return "redirect:/userspage";
     }
 }
 
