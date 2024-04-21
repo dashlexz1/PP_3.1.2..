@@ -49,7 +49,7 @@ public class UserController {
         logger.info("GET запрос на удаление пользователя: {}", id);
         userService.deleteById(id);
         logger.info("Пользователь {} успешно удален", id);
-        return "userspage";
+        return "redirect:/userspage";
     }
 
     @GetMapping("/id")

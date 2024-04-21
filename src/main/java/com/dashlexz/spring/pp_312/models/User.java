@@ -7,6 +7,13 @@ import java.io.Serializable;
 @Entity
 @Table(name = "employees")
 public class User implements Serializable {
+    public User(Long id, String name, Integer age, Integer salary) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
     public Long getId() {
         return id;
     }
@@ -17,15 +24,15 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "age")
-    private int age;
+    private Integer age;
     @Column(name = "salary")
-    private int salary;
+    private Integer salary;
 
-    public User(String name, int age, int salary) {
+    public User(String name, Integer age, Integer salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
@@ -42,7 +49,7 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -50,7 +57,7 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
