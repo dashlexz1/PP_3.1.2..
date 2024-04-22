@@ -56,6 +56,7 @@ public class UserController {
     public String editUserGet(@RequestParam(value = "id") Long id, Model model) {
         logger.info("GET запрос на редактирование пользователя с id: {}", id);
         model.addAttribute("user", userService.getUser(id));
+        model.addAttribute("id", id);
         logger.info("Пользователь получен {}", id);
         return "userspage";
     }
