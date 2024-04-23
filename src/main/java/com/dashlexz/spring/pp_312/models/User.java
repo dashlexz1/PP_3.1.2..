@@ -7,12 +7,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "employees")
 public class User implements Serializable {
-    public User(Long id, String name, Integer age, Integer salary) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
-    }
 
     public Long getId() {
         return id;
@@ -31,12 +25,6 @@ public class User implements Serializable {
     private Integer age;
     @Column(name = "salary")
     private Integer salary;
-
-    public User(String name, Integer age, Integer salary) {
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
-    }
 
     public User() {
     }
