@@ -37,13 +37,13 @@
     <h2>Добавить пользователя</h2>
     <form th:method="POST" th:action="@{/userspage}" th:object="${user}">
         <label for="name">Введите имя:</label>
-        <input type="text" field="*{name}" id="name" name="name"/>
+        <input type="text" field="name" id="name" name="name"/>
 
         <label for="age">Введите возраст:</label>
-        <input type="text" field="*{age}" id="age" name="age"/>
+        <input type="text" field="age" id="age" name="age"/>
 
         <label for="salary">Введите зарплату:</label>
-        <input type="text" field="*{salary}" id="salary" name="salary"/>
+        <input type="text" field="salary" id="salary" name="salary"/>
 
 
         <input type="submit" value="Сохранить"/>
@@ -56,16 +56,16 @@
     <h2>Изменить пользователя</h2>
     <form th:method="POST" th:action="@{/userspage/id}" th:object="${user}">
         <label for="id"></label>
-        <input hidden="hidden" type="number" field="*{id}" th:value="${id}" id="id" name="id"/>
+        <input hidden="hidden" type="number" field="id" th:value="${id}" id="id" name="id"/>
 
         <label for="nameUpdate">Введите имя:</label>
-        <input type="text" field="*{name}" id="nameUpdate" name="name"/>
+        <input type="text" field="name" id="nameUpdate" name="name"/>
 
         <label for="ageUpdate">Введите возраст:</label>
-        <input type="text" field="*{age}" id="ageUpdate" name="age"/>
+        <input type="text" field="age" id="ageUpdate" name="age"/>
 
         <label for="salaryUpdate">Введите зарплату:</label>
-        <input type="text" field="*{salary}" id="salaryUpdate" name="salary"/>
+        <input type="text" field="salary" id="salaryUpdate" name="salary"/>
 
 
         <input type="submit" value="Изменить"/>
